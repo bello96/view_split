@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <view-split arrow="leftRight" mainSize="100px" @dragend="dragend" :minSize="50" barColor="#f1f3f4"
-      barActiveColor="#dee1e6">
+    <view-split 
+      arrow="leftRight" 
+      mainSize="100px" 
+      @dragend="dragend" 
+      :minSize="50" 
+      barColor="#f1f3f4"
+      barActiveColor="#dee1e6"
+    >
       <A />
       <B slot="other" />
     </view-split>
