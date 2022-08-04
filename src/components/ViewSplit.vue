@@ -7,9 +7,7 @@
     <div
       ref="target"
       class="view-split_main"
-      :style="{
-        [arrow === 'topBottom' ? 'height' : 'width']: value || mainSize,
-      }"
+      :style="{[arrow === 'topBottom' ? 'height' : 'width']: value || mainSize}"
     >
       <slot></slot>
     </div>
@@ -33,41 +31,41 @@ export default {
     // 默认主区域的尺寸，默认50%
     mainSize: {
       type: String,
-      default: "50%",
+      default: "50%"
     },
     // 分隔方向
     arrow: {
       type: String,
-      default: "leftRight", //默认左右切割
+      default: "leftRight" //默认左右切割
     },
     // 每个分区的最小大小
     minSize: {
       type: Number,
-      default: 100,
+      default: 100
     },
     // 拖拽条颜色
     barColor: {
       type: String,
-      default: "#f1f3f4",
+      default: "#f1f3f4"
     },
     // 拖拽条选中时的颜色
     barActiveColor: {
       type: String,
-      default: "#dee1e6",
+      default: "#dee1e6"
     },
   },
   computed: {
     barStyle() {
       return {
         "--barColor": this.barColor,
-        "--barActiveColor": this.barActiveColor,
+        "--barActiveColor": this.barActiveColor
       };
-    },
+    }
   },
   data() {
     return {
       value: 0, //当前主区域尺寸
-      moving: false, //是否正在拖动
+      moving: false //是否正在拖动
     };
   },
   created() {
@@ -116,8 +114,8 @@ export default {
       this.maxHeight = this.$refs.split_body.offsetHeight - this.minSize;
       document.addEventListener("mousemove", this._event_move);
       document.addEventListener("mouseup", this._event_cancel);
-    },
-  },
+    }
+  }
 };
 </script>
 
