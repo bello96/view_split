@@ -16,11 +16,12 @@
 
 <script>
 // import ViewSplit from './components/ViewSplit.vue'
+import ViewSplit from 'view-split';
 import A from "./components/A.vue";
 import B from "./components/B.vue";
 export default {
   components: {
-    // ViewSplit,
+    ViewSplit,
     A,
     B,
   },
