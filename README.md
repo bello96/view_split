@@ -1,3 +1,27 @@
+##### 使用示例
+```java
+App.vue
+
+<template>
+  <view-split 
+    arrow="leftRight" 
+    mainSize="100px" 
+    @dragend="dragend" 
+    :minSize="50" 
+    barColor="#f1f3f4"
+    barActiveColor="#dee1e6"
+  >
+    <A />
+    <B slot="other" />
+  </view-split>
+</template>
+
+<script>
+import ViewSplit from 'view-split';
+</script>
+```
+
+
 ##### 参数说明
 - **arrow**：切割方向（默认：leftRight）
   - **leftRight**：左右
